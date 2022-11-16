@@ -36,6 +36,7 @@
   --font-bold: 700;
 }
 
+
 * {
   font-family: var(--body-font);
   /* background-color: #fff; */
@@ -44,12 +45,12 @@
   padding: 0;
 }
 
-.text-main-color {
+.text-main-color{
   color: var(--main-color);
 }
 
 /* REGISTER START */
-#error {
+#error{
   background-color: rgb(250, 125, 125);
   width: 80%;
   padding: 10px;
@@ -131,10 +132,12 @@
 }
 /* REGISTER END */
 
+
+
 /* NAVBAR START */
 .btn-main-color {
   background-color: var(--main-color);
-  color: #fff;
+  color: #fff; 
 }
 .btn-main-color:hover {
   background-color: var(--main-color);
@@ -145,7 +148,7 @@
 a.nav-link.fancy-link {
   position: relative;
 }
-a.nav-link.fancy-link::before {
+a.nav-link.fancy-link::before{
   content: "";
   position: absolute;
   width: 100%;
@@ -161,22 +164,23 @@ a.nav-link.fancy-link:hover:before {
   visibility: visible;
   transform: scaleX(1);
   color: var(--main-color);
+
 }
-a.nav-link {
+a.nav-link{
   font-weight: var(--font-medium);
-  color: #2c2a2a;
+  color: #2C2A2A;
 }
-a.nav-link:hover {
+a.nav-link:hover{
   color: var(--main-color);
 }
 /* NAVBAR END */
 /* EXPLORE START */
-.carousel-caption h1 {
+.carousel-caption h1{
   color: var(--main-color);
   /* font-size: var(--biggest-font-size); */
   font-weight: var(--font-semibold);
 }
-.carousel-caption p {
+.carousel-caption p{
   color: var(--main-color);
   /* font-size: var(--biggest-font-size); */
   font-weight: var(--font-medium);
@@ -187,22 +191,24 @@ a.nav-link:hover {
   margin-right: auto;
   margin-left: auto;
 }
-button.nav-link.nav-link {
+button.nav-link.nav-link{
   color: var(--main-color);
 }
 
-button.nav-link.nav-link.active {
+button.nav-link.nav-link.active{
   background-color: var(--main-color);
-  color: #fff;
+  color: #fff; 
 }
 
-button.nav-link.nav-link:hover {
+button.nav-link.nav-link:hover{
   background-color: var(--main-color);
   color: #fff;
   opacity: 95%;
 }
 
+
 /* EXPLORE END */
+
 
 .overlay p {
   color: white;
@@ -212,8 +218,7 @@ button.nav-link.nav-link:hover {
   color: var(--main-color);
 }
 
-footer p,
-h6 {
+footer p, h6 {
   color: var(--main-color);
 }
 
@@ -222,7 +227,7 @@ h4 {
 }
 
 .list-materi {
-  background-color: #f6f6f6;
+  background-color: #f6f6f6;;
 }
 
 .list-group a {

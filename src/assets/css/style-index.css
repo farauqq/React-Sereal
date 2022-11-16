@@ -44,10 +44,6 @@
   padding: 0;
 }
 
-.text-main-color {
-  color: var(--main-color);
-}
-
 /* REGISTER START */
 #error {
   background-color: rgb(250, 125, 125);
@@ -169,63 +165,78 @@ a.nav-link {
 a.nav-link:hover {
   color: var(--main-color);
 }
-/* NAVBAR END */
-/* EXPLORE START */
-.carousel-caption h1 {
-  color: var(--main-color);
-  /* font-size: var(--biggest-font-size); */
-  font-weight: var(--font-semibold);
+
+/* Section Home */
+
+/* tagline */
+section .row .tagline {
+  padding: 22vmin 5vmin;
 }
-.carousel-caption p {
+
+section h1 {
+  font-weight: bold;
+}
+
+/* kitten image */
+section .row .col-md-5 {
+  padding: 5vmin 1vmin;
+  padding-bottom: 35vmin;
+}
+
+section .row .col-md-5 img {
+  width: 90%;
+}
+
+/* test media query */
+@media (max-width: 765px) {
+  .tagline {
+    text-align: center;
+  }
+  .tagline h1 {
+    line-height: 1.6;
+  }
+}
+
+.tagline span {
+  background-color: var(--secondary-color);
+  padding: 0px 10px;
+  border-radius: 0px 20px 0px 20px;
+  color: var(--bg-color);
+}
+
+/* button join START*/
+.tagline .btn-join {
+  border: solid 1px var(--main-color);
   color: var(--main-color);
-  /* font-size: var(--biggest-font-size); */
   font-weight: var(--font-medium);
 }
-
-.col-centered {
-  float: none;
-  margin-right: auto;
-  margin-left: auto;
-}
-button.nav-link.nav-link {
-  color: var(--main-color);
-}
-
-button.nav-link.nav-link.active {
+.tagline .btn-join:hover {
   background-color: var(--main-color);
-  color: #fff;
+  color: var(--bg-color);
+}
+/* button join END*/
+
+/* Section Team */
+
+.section-2 .container h1 {
+  font-size: 6vmin;
 }
 
-button.nav-link.nav-link:hover {
-  background-color: var(--main-color);
-  color: #fff;
-  opacity: 95%;
+.section-2 .team {
+  padding: 1vmin 1vmin;
 }
 
-/* EXPLORE END */
-
-.overlay p {
-  color: white;
+.section-2 .card {
+  width: 20em;
+  margin-top: 10vmin;
 }
 
-.overlay h3 {
-  color: var(--main-color);
+.section-2 .card .card-text {
+  padding: 0.5em 1.2em;
+  font-size: 0.9em;
 }
 
-footer p,
-h6 {
-  color: var(--main-color);
-}
-
-h4 {
-  color: var(--main-color);
-}
-
-.list-materi {
-  background-color: #f6f6f6;
-}
-
-.list-group a {
-  background-color: #fb9847;
-  border-radius: 5px;
+.border-radius {
+  border-radius: 340px;
+  width: 60%;
 }
