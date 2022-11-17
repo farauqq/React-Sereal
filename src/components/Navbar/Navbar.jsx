@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LogoSereal from "../../assets/img/logo_sereal.png";
 import "./Navbar.css";
+import "../../assets/css/style.css";
 
 function Navbar() {
   return (
@@ -39,7 +40,19 @@ function Navbar() {
                   </Link>
                 </li>
               </ul>
-              <div id="check-profile"></div>
+              <div id="check-profile">
+                {/* from API */}
+                <ul className="navbar-nav gap-1 gap-md-4 mx">
+                  <li className="nav-item">
+                    <a className="nav-link reg fancy-link" href="./register">
+                      Register
+                    </a>
+                  </li>
+                  <a href="./login">
+                    <button className="btn btn-main-color">Login</button>
+                  </a>
+                </ul>
+              </div>
             </div>
           </div>
         </nav>

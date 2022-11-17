@@ -1,8 +1,18 @@
-import React from "react";
-// import "./Home.css";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import RightArrow from "../../assets/img/RightArrow.png";
+import { homeServices } from "../../services/homeServices";
 
 function Home() {
+  const [listHome, setListHome] = useState();
+  useEffect(() => {
+    homeServices.getIndexHome().then((response) => {
+      setListHome(response);
+    });
+  }, []);
+
+  console.log(listHome);
+
   return (
     <>
       {/* <!-- Banner --> */}
@@ -14,9 +24,9 @@ function Home() {
                 KEMBANGKAN TALENTA <span>SENIMU</span> BERSAMA SEREAL
               </h1>
               <p>Belajar digital art, melukis, menari, musik, dan teater kini tidak lagi susah. Terutama untuk kalian kaum pelajar yang ingin mengembangkan talentanya.</p>
-              <a href="Explore.html" className="btn btn-explore px-3 my-3">
+              <Link to="/explore" className="btn btn-explore px-3 my-3">
                 Explore Kelas
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -47,7 +57,23 @@ function Home() {
 
         <div id="carouselExampleIndicators" className="carousel slide" data-bs-interval="false">
           <div className="container">
-            <div className="carousel-inner">{/* <!-- get data from api --> */}</div>
+            <div className="carousel-inner">
+              {/* get data from API */}
+              <div className="carousel-item my-5">
+                <div className="row g-0 position-relative">
+                  <div className="col-md-6 mb-md-0 p-md-4">
+                    <img src="${item.img}" className="banner" alt="..." />
+                  </div>
+                  <div className="col-md-6 p-4 ps-md-0">
+                    <h5 className="mt-3 fw-bold">""</h5>
+                    <p className="text-secondary">""</p>
+                    <a href="#" className="text-decoration-none">
+                      Cari tahu lebih lanjut
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <button className="d-sm-none carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

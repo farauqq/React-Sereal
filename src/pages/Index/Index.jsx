@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../assets/css/style-index.css";
 import "../../assets/css/style-profile.css";
 import { Link } from "react-router-dom";
@@ -6,8 +6,18 @@ import { Link } from "react-router-dom";
 import kitten from "../../assets/img/kitten.png";
 import UIface3 from "../../assets/img/UIface3.jpg";
 import UIface4 from "../../assets/img/UIface4.jpg";
+import { indexServices } from "../../services/indexServices";
 
 const Index = () => {
+  const [listIndex, setListIndex] = useState();
+  useEffect(() => {
+    indexServices.getIndexList().then((response) => {
+      setListIndex(response);
+    });
+  }, []);
+
+  console.log(listIndex);
+
   return (
     <>
       {/* <!-- Section 1--> */}
@@ -60,10 +70,24 @@ const Index = () => {
             <div className="col-md-4">
               {/* <!-- card with carousel --> */}
               <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel" data-interval="10000">
-                <div className="carousel-inner">{/* <!-- get data from api/vi/profile --> */}</div>
+                <div className="carousel-inner">
+                  <div className="carousel-item">
+                    {/* <!-- second card --> */}
+                    <div className="card d-inline-block shadow-lg">
+                      <div className="card-img-top">
+                        <img src="${item.avatar}" alt="members" className="img-fluid rounded-circle w-50 p-4" />
+                      </div>
+                      <div className="card-body">
+                        <h3 className="card-title">""</h3>
+                        <p className="card-text text-secondary">""</p>
+                        <p className="text-black-50">""</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div className="col-md-4">
               {/* <!-- first --> */}
               <div className="card d-inline-block shadow-lg">
                 <div className="card-img-top">

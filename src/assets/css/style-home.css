@@ -36,7 +36,6 @@
   --font-bold: 700;
 }
 
-
 * {
   font-family: var(--body-font);
   /* background-color: #fff; */
@@ -46,7 +45,7 @@
 }
 
 /* REGISTER START */
-#error{
+#error {
   background-color: rgb(250, 125, 125);
   width: 80%;
   padding: 10px;
@@ -128,12 +127,10 @@
 }
 /* REGISTER END */
 
-
-
 /* NAVBAR START */
 .btn-main-color {
   background-color: var(--main-color);
-  color: #fff; 
+  color: #fff;
 }
 .btn-main-color:hover {
   background-color: var(--main-color);
@@ -144,7 +141,7 @@
 a.nav-link.fancy-link {
   position: relative;
 }
-a.nav-link.fancy-link::before{
+a.nav-link.fancy-link::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -160,49 +157,46 @@ a.nav-link.fancy-link:hover:before {
   visibility: visible;
   transform: scaleX(1);
   color: var(--main-color);
-
 }
-a.nav-link{
+a.nav-link {
   font-weight: var(--font-medium);
-  color: #2C2A2A;
+  color: #2c2a2a;
 }
-a.nav-link:hover{
+a.nav-link:hover {
   color: var(--main-color);
 }
-
 
 /* banner */
 .main-image {
   position: relative;
-  background-image: url(/img/image\ 16.png);
+  background-image: url(../img/image16.png);
   background-repeat: no-repeat center;
   background-size: cover;
   height: 350px;
   overflow: hidden;
 }
 
-.con-text h1{
+.con-text h1 {
   margin-top: 8vmin;
   font-size: 7vmin;
   font-weight: bold;
   color: var(--main-color);
 }
 
- .container{
+.container {
   border-radius: 20px;
   background-color: whitesmoke;
   box-shadow: 0px 2px 15px 0px rgb(0, 0, 0, 0.2);
 }
 
-section .ex-seni h2{
-  color :var(--main-color);
+section .ex-seni h2 {
+  color: var(--main-color);
   font-size: 1.5em;
   font-weight: var(--font-semibold);
 }
 
 /* for mobile tagline START */
-@media (max-width: 576px){
-
+@media (max-width: 576px) {
   .row h1 {
     line-height: 1em;
     font-size: 1.7em;
@@ -214,7 +208,6 @@ section .ex-seni h2{
   }
 }
 /* for mobile tagline END */
-
 
 /* button expoler START*/
 .btn-explore {
@@ -228,7 +221,6 @@ section .ex-seni h2{
 }
 /* button expoler END*/
 
-
 /* Image for General class START*/
 .container img {
   width: 100%;
@@ -236,12 +228,11 @@ section .ex-seni h2{
   object-fit: cover;
 }
 
-.rotate-img{
+.rotate-img {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
 /* Image for General class END */
-
 
 /* .my-profile {
   width: 40px;

@@ -5,16 +5,18 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Explore from "./pages/Explore/Explore";
 import Gallery from "./pages/Gallery/Gallery";
+import About from "./pages/About/About";
 
 const AppRouter = () => {
   return (
     <Routes>
       <Route path="/" element={<Index />} />
+      <Route path="/home" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/explore" element={<Explore />} />
       <Route path="/gallery" element={<Gallery />} />
-      <Route path="/home" element={<Home />} />
+      <Route path="/about" element={<About />} />
     </Routes>
   );
 };
