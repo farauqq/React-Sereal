@@ -2,21 +2,20 @@ import React, { useEffect, useState } from "react";
 import "../../assets/css/style-index.css";
 import "../../assets/css/style-profile.css";
 import { Link } from "react-router-dom";
-// import "../../App.css";
 import kitten from "../../assets/img/kitten.png";
 import UIface3 from "../../assets/img/UIface3.jpg";
 import UIface4 from "../../assets/img/UIface4.jpg";
-import { indexServices } from "../../services/indexServices";
+import { discoverServices } from "../../services/discoverServices";
 
-const Index = () => {
-  const [listIndex, setListIndex] = useState();
+const Discover = () => {
+  const [listDiscovery, setListDiscovery] = useState([]);
   useEffect(() => {
-    indexServices.getIndexList().then((response) => {
-      setListIndex(response);
+    discoverServices.getDiscoveryList().then((response) => {
+      setListDiscovery(response);
     });
   }, []);
 
-  console.log(listIndex);
+  console.log(listDiscovery);
 
   return (
     <>
@@ -72,6 +71,21 @@ const Index = () => {
               <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel" data-interval="10000">
                 <div className="carousel-inner">
                   <div className="carousel-item">
+                    {/* Get from API */}
+                    {listDiscovery.map((item) => (
+                      <div className="carousel-item">
+                        <div className="card d-inline-block shadow-lg">
+                          <div className="card-img-top">
+                            <img src={item.avatar} alt="members" className="img-fluid rounded-circle w-50 p-4" />
+                          </div>
+                          <div className="card-body">
+                            <h3 className="card-title">{item.name}</h3>
+                            <p className="card-text text-secondary">{item.comment}</p>
+                            <p className="text-black-50">{item.company}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                     {/* <!-- second card --> */}
                     <div className="card d-inline-block shadow-lg">
                       <div className="card-img-top">
@@ -110,4 +124,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Discover;

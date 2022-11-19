@@ -1,50 +1,58 @@
 import React from "react";
-import "../../assets/css/style.css";
+import "../../assets/css/style-sign.css";
 import { Link } from "react-router-dom";
 import google from "../../assets/img/google.png";
 import LoginCat from "../../assets/img/login_cat.png";
+import bg from "../../assets/img/bg-log.jpg";
 
 function Login() {
   return (
     <>
-      <section className="login d-flex">
-        <div className="login-left w-100 h-100 d-none d-md-block">
-          <div className="col-11">
-            <img className="w-100" src={LoginCat} alt="" />
-          </div>
-        </div>
-        <div className="login-right d-flex w-100 h-100">
-          <div className="col-12">
-            <div className="login-header text-center">
-              <h1>Selamat Datang</h1>
-              <p id="error">Email atau Password salah!</p>
-            </div>
-            <form action="JavaScript:void(0)" onsubmit="login();" className="login-form">
-              <label for="email" className="form-label">
-                Email
-              </label>
-              <input type="email" className="form-control" id="e-mail" placeholder="name@example.com" />
-              <label for="pass" className="form-label">
-                Password
-              </label>
-              <input type="password" className="form-control" id="password" placeholder="*******" />
-              <input type="submit" value="Masuk" className="signin" />
+      <div className="container-fluid ps-md-0">
+        <div className="row g-0">
+          <img className="d-none d-md-flex col-md-4 col-lg-6" src={bg} alt="" />
+          <div className="col-md-8 col-lg-6">
+            <div className="login d-flex align-items-center py-5">
+              <div className="container">
+                <div className="row">
+                  <div className="col-md-9 col-lg-8 mx-auto">
+                    <h1 className="judul-login">
+                      Welcome to <span>SEREAL</span>
+                    </h1>
+                    <h2 className="login-heading mb-4">Sign In</h2>
 
-              <p className="text-center">atau</p>
-              <button className="signin-google">
-                <img src={google} alt="sereal-google-login" height="30px" />
-                Continue with google
-              </button>
-              <p className="text-center">
-                Belum mempunyai akun?
-                <Link to="/register">
-                  <span>Daftar</span>
-                </Link>
-              </p>
-            </form>
+                    {/* <!-- Sign In Form --> */}
+                    <form id="login-form" method="GET">
+                      <div className="form-floating mb-3">
+                        <input type="email" required className="form-control" id="email" placeholder="name@example.com" />
+                        <label htmlFor="floatingInput">Email address</label>
+                      </div>
+                      <div className="form-floating mb-3">
+                        <input type="password" required className="form-control" id="password" placeholder="Password" />
+                        <label htmlFor="floatingPassword">Password</label>
+                      </div>
+                      <div className="d-grid">
+                        <button className="btn btn-lg btn-login text-uppercase fw-bold mb-2" type="submit">
+                          Sign in
+                        </button>
+
+                        <div className="text-center">
+                          <span>
+                            Belum memiliki akun?{" "}
+                            <Link to="/register" className="d-inline text-decoration-none">
+                              Daftar
+                            </Link>
+                          </span>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 }
