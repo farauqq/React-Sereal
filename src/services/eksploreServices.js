@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-let dua_kolom_kelas = document.getElementById('dua-kolom-kelas')
+let dua_kolom_kelas = document.getElementById("dua-kolom-kelas")
 let api_link_kelas = 'https://63492926a59874146b18c2bb.mockapi.io/tes/Kelas'
 
 
