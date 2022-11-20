@@ -1,13 +1,13 @@
 import React from "react";
 import axios from "axios";
 
-export const homeServices = {
-  getHomeList,
+export const discoverServices = {
+  getDiscoveryList,
 };
 
-async function getHomeList() {
+async function getDiscoveryList() {
   return axios
-    .get("https://635272a4ffbb7da0f2d8983d.mockapi.io/api/v1/ucup")
+    .get("https://635272a4ffbb7da0f2d8983d.mockapi.io/api/v1/profile")
     .then((response) => {
       return response.data;
     })

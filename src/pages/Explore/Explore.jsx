@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import BgExplore from "../../assets/img/bg-explore.jpg";
 import "../../assets/css/style-profile.css";
-import "../../assets/css/style.css";
+// import "../../assets/css/style.css";
+import "../../App.css";
 import { eksploreServices } from "../../services/eksploreServices";
 
 const Explore = () => {
-  const [listExplore, setListExplore] = useState();
+  const [listExplore, setListExplore] = useState([]);
   useEffect(() => {
     eksploreServices.getExploreList().then((response) => {
       setListExplore(response);
     });
   }, []);
 
-  console.log(listExplore);
+  // console.log(listExplore);
   return (
     <>
       {/* <!-- Banner/ Carousel --> */}
@@ -35,7 +37,7 @@ const Explore = () => {
       <section className="tab-container my-4">
         <ul className="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
           <li className="nav-item" role="presentation">
-            <button className="nav-link main-color active" id="pills-all" onClic="getDataKelas()" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+            <button className="nav-link main-color active" id="pills-all" onClick="getDataKelas()" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
               Semua Kelas
             </button>
           </li>
@@ -60,27 +62,26 @@ const Explore = () => {
             </button>
           </li>
         </ul>
-        {/* <div className="tab-content" id="pills-tabContent">
-          <div className="row">
-            {listExplore.map((item) => (
-              <div class="col my-3">
-                <div class="card flex-row ">
-                  <img src="${item.img}" height="100%" class="col-centered" alt="..." />
-                  <div class="card-body">
-                    <h5 class="card-title">""</h5>
-                    <p class="card-text">"</p>
-                    <div class="d-flex justify-content-between">
-                      <a href="">Tets</a>
-                      <a href="${item.link}" class="btn btn-main-color" id="card-button">
-                        Lihat Kelas
-                      </a>
-                    </div>
+        <div className="tab-content" id="pills-tabContent">
+          {/* Get from API */}
+          {listExplore.map((item) => (
+            <div className="col my-3">
+              <div className="card flex-row ">
+                <img src={item.img} height="100%" className="col-centered" alt="..." />
+                <div className="card-body">
+                  <h5 className="card-title">{item.judul}</h5>
+                  <p className="card-text">{item.desc}</p>
+                  <div className="d-flex justify-content-between">
+                    <Link to="">{item.level}</Link>
+                    <Link to={item.link} className="btn btn-main-color" id="card-button">
+                      Lihat Kelas
+                    </Link>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div> */}
+            </div>
+          ))}
+        </div>
       </section>
     </>
   );

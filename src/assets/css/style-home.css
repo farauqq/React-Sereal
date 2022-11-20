@@ -183,11 +183,11 @@ a.nav-link:hover {
   color: var(--main-color);
 }
 
-.container {
+/* .container {
   border-radius: 20px;
   background-color: whitesmoke;
   box-shadow: 0px 2px 15px 0px rgb(0, 0, 0, 0.2);
-}
+} */
 
 section .ex-seni h2 {
   color: var(--main-color);
@@ -220,24 +220,3 @@ section .ex-seni h2 {
   color: var(--bg-color);
 }
 /* button expoler END*/
-
-/* Image for General class START*/
-.container img {
-  width: 100%;
-  height: 90%;
-  object-fit: cover;
-}
-
-.rotate-img {
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-}
-/* Image for General class END */
-
-/* .my-profile {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-image: url(../img/profile.jpg);
-  background-size: cover;
-} */
