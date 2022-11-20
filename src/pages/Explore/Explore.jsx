@@ -63,24 +63,28 @@ const Explore = () => {
           </li>
         </ul>
         <div className="tab-content" id="pills-tabContent">
-          {/* Get from API */}
-          {listExplore.map((item) => (
-            <div className="col my-3">
-              <div className="card flex-row ">
-                <img src={item.img} height="100%" className="col-centered" alt="..." />
-                <div className="card-body">
-                  <h5 className="card-title">{item.judul}</h5>
-                  <p className="card-text">{item.desc}</p>
-                  <div className="d-flex justify-content-between">
-                    <Link to="">{item.level}</Link>
-                    <Link to={item.link} className="btn btn-main-color" id="card-button">
-                      Lihat Kelas
-                    </Link>
+          <div className="d-flex flex-column col-centered col-11" id="card-container">
+            <div className="row row-cols-1 row-cols-lg-2 mb-1" id="dua-kolom-kelas">
+              {/* Get from API */}
+              {listExplore.map((item) => (
+                <div className="col my-3">
+                  <div className="card flex-row ">
+                    <img src={item.img} height="100%" className="col-centered" alt="..." />
+                    <div className="card-body">
+                      <h5 className="card-title">{item.judul}</h5>
+                      <p className="card-text">{item.desc}</p>
+                      <div className="d-flex justify-content-between">
+                        <Link to="">{item.level}</Link>
+                        <Link to={item.link} className="btn btn-main-color" id="card-button">
+                          Lihat Kelas
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </section>
     </>
