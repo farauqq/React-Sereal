@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import BgExplore from "../../assets/img/bg-explore.jpg";
 import "../../assets/css/style-profile.css";
-import "../../assets/css/style.css";
+// import "../../assets/css/style.css";
+import "../../App.css";
 import { eksploreServices } from "../../services/eksploreServices";
 
 const Explore = () => {

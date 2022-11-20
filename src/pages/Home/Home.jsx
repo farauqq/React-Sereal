@@ -5,14 +5,14 @@ import { homesServices } from "../../services/homesServices";
 import "../../assets/css/style-home.css";
 
 function Home() {
-  // const [listHomes, setListHomes] = useState([]);
-  // useEffect(() => {
-  //   homesServices.getHomeList().then((response) => {
-  //     setListHomes(response);
-  //   });
-  // }, []);
+  const [listHomes, setListHomes] = useState([]);
+  useEffect(() => {
+    homesServices.getHomesList().then((response) => {
+      setListHomes(response);
+    });
+  }, []);
 
-  // console.log(listHomes);
+  console.log(listHomes);
 
   return (
     <>
@@ -80,10 +80,10 @@ function Home() {
           </div>
 
           <button className="d-sm-none carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <img src={RightArrow.png} alt="" className="rotate-img" />
+            <img src={RightArrow} alt="" className="rotate-img" />
           </button>
           <button className="d-sm-none carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <img src={RightArrow.png} alt="" />
+            <img src={RightArrow} alt="" />
           </button>
         </div>
       </section>
