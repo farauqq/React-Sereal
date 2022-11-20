@@ -44,10 +44,6 @@
   padding: 0;
 }
 
-.text-main-color {
-  color: var(--main-color);
-}
-
 /* REGISTER START */
 #error {
   background-color: rgb(250, 125, 125);
@@ -173,12 +169,10 @@ a.nav-link:hover {
 /* EXPLORE START */
 .carousel-caption h1 {
   color: var(--main-color);
-  /* font-size: var(--biggest-font-size); */
   font-weight: var(--font-semibold);
 }
 .carousel-caption p {
   color: var(--main-color);
-  /* font-size: var(--biggest-font-size); */
   font-weight: var(--font-medium);
 }
 
@@ -187,19 +181,10 @@ a.nav-link:hover {
   margin-right: auto;
   margin-left: auto;
 }
-button.nav-link.nav-link {
-  color: var(--main-color);
-}
 
-button.nav-link.nav-link.active {
+#card-button {
   background-color: var(--main-color);
-  color: #fff;
-}
-
-button.nav-link.nav-link:hover {
-  background-color: var(--main-color);
-  color: #fff;
-  opacity: 95%;
+  border: none;
 }
 
 /* EXPLORE END */
@@ -225,7 +210,15 @@ h4 {
   background-color: #f6f6f6;
 }
 
-.list-group a {
+.list-group button {
   background-color: #fb9847;
   border-radius: 5px;
+}
+
+.btn-login {
+  font-size: 0.9rem;
+  border-radius: 70px;
+  border-color: #fb9847;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
 }
